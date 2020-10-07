@@ -3,17 +3,16 @@
     padding:0;
     box-sizing: border-box;
 }
-.container{
+body{
     background-color: rgb(147, 175, 184);
     font-family: 'Times New Roman', Times, sans-serif;
     width: 90%;
     margin:5px auto;         
 }
-.header{
+header{
     background-color: rgb(23, 104, 131);
     display:flex;
-    margin:0px 20px;
-    margin-top: 20px;
+    margin:20px 20px 0px 20px;
     justify-content:space-between;
 }
 .profile{
