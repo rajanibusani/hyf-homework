@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Step-1b</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form1.css">
+    </head>
+    <body>
+        <header>
+            <p class="logo">Logo</p>
+            <p class="nav">Navigation</p>
+        </header>
+        <main>
+        <div class="sign-up-info">
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <p>We can not wait to help you improve your life-style and gain the attention from people around you!</p> 
+            <p>Sign up below to save up to 70% on apparel, hand-bags and cosmetics.  Our agents are busy 
+                picking the best offers that match your preferences and style.  Every week we will send you a
+                hand-picked selection - we just need to know a few details about your first...</p>
+        
+        
+            <h2>Step 1/4 -tell us who you are?</h2>
+        </div>   
+            <!---progress bar-->
+           <div class="progress">
+             <label for="progressbar">Progress</label>
+             <progress id="progressbar" value="2" max="5">2</progress>
+             <p>Nice to meet you.Lets spend a minute to get to know each other? 
+               Please enter the following:</p>
+           </div>
+       
+            <!--form to enter the user info starts here-->
+    <form action="#" method="GET" class="field">
+      <fieldset>
+          <div>
+            <label for="firstname">First name*</label>
+            <input id="firstname" type="text" name="firstname" required>
+            <label for="lastname">Last name*</label>
+            <input id="lastname" type="text" name="lastname" required>
+          </div>
+          <div>
+            <label for="country">Country*</label>
+            <select id="country" name="dropdown" required>                               
+             <option value="denamrk">Denamrk</option>
+             <option value="sweden">Sweden</option>
+             <option value="norway">Norway</option>
+             <option value="germany">Germany</option>
+             <option value="finland">Finland</option>  
+             </select>                                 
+           </div>    
+
+           <div>
+             <label for="streetname">Street address*</label>
+             <input id="streetname" type="text" name="streetname" required>                             
+             <label for="postcode">Post code*</label>
+             <input id="postcode" type="text" name="postcode" required minlength="4" maxlength="4">
+           </div>
+           <p>Use the same address for billing and shipping?
+            Uncheck below to fill out a separate shipping address</p>
+        <div> 
+                <label for="shipping-address">Shipping address<br>(check me)</label>
+                <input id="shipping-address" type="checkbox" name="shippingaddress">
+                <!--hidden shipping address-->
+                <div class="shipping-address">            
+             
+                <div>
+                    <label for="fname">First name*</label>
+                    <input id="fname" type="text" name="firstname" required>
+                    <label for="lname">Last name*</label>
+                    <input id="lname" type="text" name="lastname" required>
+                </div>
+                <div>
+                 <label for="place">Country*</label>
+                 <select id="place" name="country" required>                                       
+                     <option value="denamrk">Denamrk</option>
+                     <option value="sweden">Sweden</option>
+                     <option value="norway">Norway</option>
+                     <option value="germany">Germany</option>
+                     <option value="finland">Finland</option>  
+                 </select>                                 
+                </div>                    
+                 
+                 <div>
+                     <label for="street">Street address*</label>
+                     <input id="street" type="text" name="streetname" required>                             
+                     <label for="post_code">Post code*</label>
+                     <input id="post_code" type="text" name="postcode" required minlength="4" maxlength="4">
+                 </div>
+         
+        </div>  
+                <div class="description">
+                    <div>
+                    <label for="description">Profile description</label> 
+                    <p>Please provide a short<br>description of yourself to be<br> 
+                        displayed on your social<br> community pages</p> 
+                    </div>      
+                    <textarea id="description" name="description" maxlength="500"></textarea>             
+                </div>
+                <!---save and next buttons-->
+                <div class="button">
+                    <button type="submit" value="save">Save</button>
+                    <button><a href="form2.html">Next</a></button> 
+                </div>
+                  
+
+    </fieldset>      
+  </form>
+   </main>
+  </body>
+  </html>

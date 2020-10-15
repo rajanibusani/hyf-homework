@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width:95%;        
+    margin:10px;    
+    border:2px solid grey;   
+    font-family: Georgia,sans-serif; 
+}
+header{
+    margin:40px 30px 20px 40px;    
+    height: 100px;
+    display: flex;
+    justify-content:space-between;    
+}
+.logo, .nav{
+    flex-basis:150px;   
+    background-color: silver;
+    text-align: center; 
+    padding:40px;
+    border:2px solid grey;
+}
+.nav{    
+   flex-basis:400px;  
+}
+.sign-up-info { 
+    width:75%; 
+    padding:20px; 
+  }
+h1{
+    font-weight:600;
+    letter-spacing:2px;
+    padding-bottom:10px;
+    font-size:40px;
+}
+p{
+    padding:15px 0px;
+    font-size:18px;
+    line-height:1.5; 
+}
+h2{
+    margin-top: 30px;
+    font-size:30px;
+    padding-bottom:10px;
+    font-weight:600;
+}
+.progress{
+    font-size:18px;
+    padding:10px;
+}
+progress{
+    /* to remove default styling */
+    -webkit-appearance:none;    
+    display: block;   
+    margin-top: 10px;
+    width:90%;
+    height:50px;    
+    border:1px solid grey;
+}
+/*styles : the progress bar inside*/
+progress::-webkit-progress-bar { background-color:whitesmoke;}
+progress::-webkit-progress-value {   
+    background-color:grey;     
+}
+/* webform styling starts here*/
+fieldset{
+    border:none ;
+    margin:10px;
+}
+label{
+    font-weight: 600; 
+    font-size:18px;
+}
+.selection_items{
+    width: 500px;
+    margin-left: 20px;
+    display: flex;
+    flex-wrap:wrap; 
+      
+ }
+ .selection_items label{
+     flex-basis:200px;
+     margin: 10px;
+     padding: 10px;  
+     
+ }
+ input[type="checkbox"]{
+    width:25px;
+    height:25px;    
+    position: relative;
+    top:5px;
+    left: 2px;    
+}
+img{
+    width:200px
+}
+.img_box{
+    width: 220px;
+    display:inline-block;    
+}
+span{
+    margin-left: 100px;    
+}
+.selection_images{
+    width:1000px;
+    display: flex;
+   flex-wrap:wrap; 
+   padding: 20px;
+   
+}
+.selection_images label{
+    margin: 5px;  
+}
+.button{
+    width: 90%;
+    display:flex;
+    justify-content:flex-start;     
+}
+.button button{
+    color: black;    
+    display: block;    
+    background-color:grey;
+    height: 50px;
+    width: 100px;
+    border: 1px solid grey;
+    text-align: center;
+    padding:10px;
+    margin:10px;
+    font-size: 20px;    
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: black; 
+}
+a:hover, button:hover{
+    background-color:rgb(50, 133, 189);
+}
+/* form4.html styling*/
+.exp_info input[type=text], .cvv input[type=text]{
+    width:60px;
+}
+label{
+    display: inline-block;
+    width:140px;
+    margin-left: 20px;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+input[type="text"], select{
+    width:300px;
+    margin:10px 0px;
+    padding: 15px;
+    display: inline-block;
+    border: 2px solid grey;
+    border-radius:2px;    
+    font-size: 20px;    
+}
+@media only screen and (max-width: 600px){
+    body{
+        width: 100%;
+        margin:10px;
+        }
+     header {
+        width:90%;
+        margin: 10px auto;
+        border:2px solid grey;   
+        }
+     header .logo,.nav{
+           border: none;
+        }
+     .sign-up-info {    
+           width:100%;
+           padding:10px;
+       }  
+      h1{
+          font-size:24px;
+      } 
+      h2{
+          font-size:20px;
+      }
+   
+      p{
+         font-size:15px;
+      }
+      .selection_items{
+        margin-left:0px;
+    }
+    .selection_images{
+       
+      flex-direction: column; 
+    }
+      .button{
+        justify-content:flex-start;
+    }
+}

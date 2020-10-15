@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Step2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form2.css">
+    </head>
+    <body>
+        <header>
+            <p class="logo">Logo</p>
+            <p class="nav">Navigation</p>
+        </header>
+        <main>
+        <div class="sign-up-info">
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <h2>Step 2/4 -how can we reach you?</h2>
+        </div>
+        <!---progress bar-->
+        <div class="progress">
+            <label for="progressbar">Progress</label>
+            <progress id="progressbar" value="3" max="5">3</progress>
+            <p>We will probably need to stay in touch somehow.Let is know how we reach you?</p>
+        </div>  
+        <form action="#" method="GET" class="field">
+            <fieldset>
+                <!--user contact details form--> 
+                <div class="email">
+                    <label for="email">Email*</label>
+                    <input id="email" type="email" name="email" required>
+                    <label for="phonenumber">Phone</label>
+                    <input id="phonenumber" type="tel" name=phone-no>
+                </div>
+                <div>
+                    <label for="psw">Password*</label>
+                    <input id="psw" type="password" name="password" required>
+                </div>
+                <div>
+                 <label for="re-psw">Re-enter Password*</label>
+                 <input id="re-psw" type="password" name="re-password" required>
+                 </div>            
+         </div>        
+         <p>I want to sign up for the news letter</p>
+         <!--news letter subscription-->
+         <div class="subscription">
+                <div class="news">
+                <label for="weekly-news">Weekly news</label>
+                <input id="weekly-news" type="radio" name="subscription" value="weekly">
+                </div> 
+                  <div class="news">
+                  <label for="monthly-news">Monthly news</label>
+                  <input id="monthly-news" type="radio" name="subscription" value="monthly">
+                  </div> 
+                     <div class="news">
+                     <label for="no-news">Don't send me news</label>
+                     <input id="no-news" type="radio" name="subscription" value="no-news">
+                     </div> 
+                 </div>
+                 <!--buttons-->
+                 <div class="button">
+                    <button type="submit" value="save">Save</button>
+                    <button><a href="form3.html">Next</a></button> 
+                    </div>     
+         </div>       
+
+    </fieldset>      
+</form>
+ </main>
+</body>
+</html>       
