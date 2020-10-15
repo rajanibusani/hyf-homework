@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Step4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form3.css">
+    </head>
+    <body>
+        <header>
+            <p class="logo">Logo</p>
+            <p class="nav">Navigation</p>
+        </header>
+        <main>
+        <div class="sign-up-info">
+            <h1>Sign up to yourcustomtailor.com</h1>
+            <h2>Step 4/4 -Payment</h2>
+        </div>
+        <!---progress bar-->
+        <div class="progress">
+            <label for="progressbar">Progress</label>
+            <progress id="progressbar" value="5" max="5">5</progress>
+            <p>Please fill in your payment data</p>
+        </div>  
+     <form action="#" method="GET" class="field">
+            <fieldset> 
+                <!--user payment details-->
+                <div>
+                    <label for="name">Name on card </label>
+                        <input id="name" type="text">
+                    </div>
+                    <div>
+                        <label for="card">Card type</label>
+                        <select id="card">
+                            <option value="master">Master card</option>
+                            <option value="visa">Visa card</option>
+                            <option value="dankort">Dankort</option>
+                         </select>   
+                    </div>  
+                    <div>
+                        <label for="card-no">Credit card number</label>
+                        <input type="text" id="card-no">
+                        <label for="fname">First name</label>
+                        <input id="fname" type="text">
+                    </div> 
+                    <div class="exp_info">
+                        <label for="expmnth">Expiry month</label>
+                        <input id="expmnth" type="text">
+                        <label for="expyr">Expiry year</label>
+                        <input id="expyr" type="text">
+                    </div>
+                    <div class="cvv">
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="text">
+                    </div>  
+                    <div class="button">
+                        <button type="submit" value="save">Save</button>
+                        <button><a href="form1a.html">Next</a></button> 
+                        </div>
+                         
+                </fieldset>      
+            </form>
+             </main>
+            </body>
+            </html>          
