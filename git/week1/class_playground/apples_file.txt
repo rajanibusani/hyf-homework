@@ -2,3 +2,5 @@ apples
 bananas     
 pears   
 mangoes
+  green apples
+  red apples
