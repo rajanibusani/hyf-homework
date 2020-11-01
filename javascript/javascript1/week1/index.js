@@ -14,11 +14,11 @@ console.log(stringText)
 //TASK2: A dog age calculator
 
 const dogYearOfBirth = 2015; //fixed. No assignment of new values.
-let dogYearFuture = 2025; //can assign and check with other years.
+const dogYearFuture = 2025; //can assign and check with other years.
 let dogYear = dogYearFuture-dogYearOfBirth;
 
-let shouldShowResultInDogYears;
-if(shouldShowResultInDogYears == true){
+let shouldShowResultInDogYears = false;
+if(shouldShowResultInDogYears){
     dogYear *= 7;
     console.log(`\"Your dog will be ${dogYear} dog years in ${dogYearFuture}.\"`)   
 } else {
@@ -42,10 +42,12 @@ const amtPayingByPeter = 2500000;
 let priceOfPetersHouse;
 priceOfPetersHouse = volumeInMeters1 * 2.5 * 1000 + gardenSizeInM2[0] * 300;
 
-if (priceOfPetersHouse <= amtPayingByPeter){
+if (priceOfPetersHouse < amtPayingByPeter){
     console.log(`Actual price of the house is ${priceOfPetersHouse}.\nPeter is paying (${amtPayingByPeter}) too high for the house.`)
     
-} 
+} else if (priceOfPetersHouse == amtPayingByPeter){
+    console.log('Peter is paying the right amout for the house.');
+}
 else {
     console.log(`Actual price of the house is ${priceOfPetersHouse}.\nPeter is paying (${amtPayingByPeter}) too little for the house.`)
 }
@@ -56,9 +58,11 @@ const amtPayingByJulia = 1000000;
 let priceOfJuliasHouse;
 priceOfJuliasHouse = volumeInMeters2 * 2.5 * 1000 + gardenSizeInM2[1] * 300;
 console.log(`Actual price of the Julia\'s house is ${priceOfJuliasHouse}.`);
-if (priceOfJuliasHouse <= amtPayingByJulia){
+if (priceOfJuliasHouse < amtPayingByJulia){
 console.log(`Julia is paying (${amtPayingByJulia}) too high for the house.`)  
-} 
+} else if (priceOfJuliasHouse == amtPayingByJulia){
+    console.log('Julia is paying the right amout for the house.');
+}
 else {
     console.log(`Julia is paying (${amtPayingByJulia}) too little for the house.`) 
 }
@@ -67,6 +71,7 @@ else {
 
 let firstWords = ['Easy','Awesome','Corporate','Trade','Creativ','Software','Computer','Digital','Professional','Innovative'];
 let secondWords = ['Developers', 'Tech', 'Services','Solutions','Systems','Development','Tech Tools','Technologies','Group','Technologies'];
-const randomNumber = Math.floor(Math.random() * 10);
-const startupName = firstWords[randomNumber]+' '+secondWords[randomNumber];
+const randomNumber1 = Math.floor(Math.random() * firstWords.length);
+const randomNumber2 = Math.floor(Math.random() * secondWords.length);
+const startupName = firstWords[randomNumber1]+' '+secondWords[randomNumber2];
 console.log(`The startup: \"${startupName}\" containes ${startupName.length} characters.`);
