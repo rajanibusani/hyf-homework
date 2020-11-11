@@ -13,7 +13,7 @@ console.log("Savenote app with my unique feature.")
 /*with in savenote app, i want add check mark which will help to separate finished and unfinished tasks*/ 
 const notes = [];
 const finishedTasks=[];
-const UnfinishedTasks=[];
+const unfinishedTasks=[];
 function saveNote(content, id,check) {  
    notes.push({content:content, id:id});
 
@@ -22,7 +22,7 @@ function saveNote(content, id,check) {
     
   }else if (check === false|| check === undefined){
  
-  UnfinishedTasks.push({content:content, id:id});    
+  unfinishedTasks.push({content:content, id:id});    
 }
 
 }
@@ -37,7 +37,7 @@ console.log(notes)// will log out all the notes
 console.log(finishedTasks)
 //[{content: "Pick up online-order", id: 1}]
 
-console.log(UnfinishedTasks)
+console.log(unfinishedTasks)
 /*[{content: "shopping groceries", id: 1}
   {content: "Do laundry", id: 2}
   {content: "paying bills", id: 3}]*/
