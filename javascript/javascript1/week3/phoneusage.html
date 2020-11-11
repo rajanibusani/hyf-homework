@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            smartphone-usage
+        </title>
+        <meta charset="utf-8">
+             
+    </head>
+    <body>
+    
+    <script>
+    //smartphone usage
+//adding activities on the phone with todays's date.
+"use strict"
+const activities = [];
+function addActivity(activity, duration){
+  
+    let date= new Date();
+    let todaysDate =date.toLocaleDateString();
+  activities.push({date:todaysDate, activity:activity, duration:duration}); 
+    
+}
+addActivity( "Youtube", 30);
+addActivity( "Faceb00k", 10);
+addActivity( "Whatsapp", 20);
+addActivity( "Instagram", 20);
+addActivity("News", 10)
+console.log(activities)
+/*[{date: "11/11/2020", activity: "Youtube", duration: 30},
+{date: "11/11/2020", activity: "Faceb00k", duration: 10},
+{date: "11/11/2020", activity: "Whatsapp", duration: 20},
+{date: "11/11/2020", activity: "Instagram", duration: 20},
+{date: "11/11/2020", activity: "News", duration: 10}*/
+
+//showStatus(activities); setting a limit for smartphone usage
+
+let totalTime = 0;
+const usageLimit = 120;
+function showStatus(activities){
+  if(activities.length===0){
+    console.log("Add someactivities before calling showStatus.")
+  }else {
+    for (let i=0; i<activities.length; i++){   
+    
+   totalTime += activities[i].duration; 
+     
+    }
+    
+    if(totalTime<usageLimit){
+  console.log(`You have added ${activities.length} activities. They amount to ${totalTime}min. of usage.`);
+
+    } else if(totalTime===usageLimit){
+      console.log("You have reached your limit, no more smartphoning for you!");
+    } else {
+      console.log("You have exceeded your usage limit, please stop using your smartphone!");
+    }
+}
+}
+showStatus(activities);
+//You have added 5 activities. They amount to 90min. of usage
+// finding the smartphone activity with more duration
+let durationArray = [];
+function getActivityWithMoreTime(activities){  
+  for (let i=0; i<activities.length; i++){
+    durationArray.push(activities[i].duration);  
+  }
+  let max = Math.max(...durationArray);
+  for (let i=0; i<activities.length; i++){
+    if (max===activities[i].duration){
+      console.log('On '+activities[i].activity+' you spent maximum time i.e '+max+' minutes.')
+    }
+  }
+}
+getActivityWithMoreTime(activities);
+//On Youtube you spent maximum time i.e 30 minutes
+</script>
+</body>
+</html>
