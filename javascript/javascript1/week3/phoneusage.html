@@ -16,8 +16,8 @@
 const activities = [];
 function addActivity(activity, duration){
   
-    let date= new Date();
-    let todaysDate =date.toLocaleDateString();
+    const date= new Date();
+    const todaysDate =date.toLocaleDateString();
   activities.push({date:todaysDate, activity:activity, duration:duration}); 
     
 }
@@ -40,7 +40,7 @@ const usageLimit = 120;
 function showStatus(activities){
   if(activities.length===0){
     console.log("Add someactivities before calling showStatus.")
-  }else {
+  }
     for (let i=0; i<activities.length; i++){   
     
    totalTime += activities[i].duration; 
@@ -56,7 +56,7 @@ function showStatus(activities){
       console.log("You have exceeded your usage limit, please stop using your smartphone!");
     }
 }
-}
+
 showStatus(activities);
 //You have added 5 activities. They amount to 90min. of usage
 // finding the smartphone activity with more duration
