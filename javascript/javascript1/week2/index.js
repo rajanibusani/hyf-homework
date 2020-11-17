@@ -56,7 +56,7 @@ if(studentName === "") {
     console.log(`Student ${studentName} is already in the class.The same person cannot be added to the class.`)
 }else if (class16Students.length<6){
   class16Students.push(studentName);}
-else if(class16Students.length=6){
+else if(class16Students.length>=6){
     if(studentName === "Queen Margrethe II" || class16Students.includes('Queen Margrethe II')){
         class16Students.push(studentName); 
       }
