@@ -69,7 +69,7 @@ function seriesDurationInLife() {
   // changing the days, and minutes to hours
   const totalDurationInHours = (seriesDurations[i].days*24)+ seriesDurations[i].hours+ (seriesDurations[i].minutes/60);
   
-  let percentageInLifeSpan = (totalDurationInHours/averageLifeSpanInHours)*100;
+  const percentageInLifeSpan = (totalDurationInHours/averageLifeSpanInHours)*100;
   console.log(`${seriesDurations[i].title} took ${percentageInLifeSpan.toFixed(3)}% of my life.`); 
 /*will logout Game of thrones took 0.010% of my life.
               Sopranos took 0.012% of my life.
@@ -101,9 +101,9 @@ console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do lau
 
 function getNote(id) {
 
-  for (let i=1; i<= notes.length; i++){
-    if(i===id){
-      return notes[i-1];
+  for (let i=0; i<notes.length; i++){
+    if(notes[i].id === id){
+      return notes[i];
     }    
   }  
   return 'Error: please provide suitable id value';
