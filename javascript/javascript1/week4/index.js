@@ -72,14 +72,14 @@ const secondNumber = Number(arrayOfCommand[4]);
                 return  `timer set for ${timeInMinutes} minutes`;
                 break; 
 
-            case 'Arithmetic operations of a and b':  //extra command to voice assistant.
-                const a = Math.floor(Math.random()*100+1);
-                const b = Math.floor(Math.random()*10+1);              
+             case 'Arithmetic operations of two random numbers':  //extra command to voice assistant.
+                const number1 = Math.floor(Math.random()*100+1);
+                const number2 = Math.floor(Math.random()*10+1);              
                   
-                  console.log(`Two Numbers are ${a} and ${b}`); //Two Numbers are 44 and 3
-                  return arithmeticOperations(a,b); 
+                  console.log(`Two Numbers are ${number1} and ${number2}`); //Two Numbers are 44 and 3
+                  return arithmeticOperations(number1,number2); 
              default:
-                 return 'Please enter the command in required format.'                   
+                 return 'Please enter the command in required format.'             
      }
 }
 //function to remove todo's from array
@@ -100,18 +100,18 @@ function timer(){
      console.log('Timer Done')
  }
  // for arithmetic operations of two numbers
-function arithmeticOperations(a,b){
-     const sumOfNumbers = a+b;
-     const substractionOfNumbers = a-b;
-     const divisionOfNumbers = a/b;
-     const multiplicationOfNumbers = a*b;
-     return {
-         sumValue : sumOfNumbers,
-         substractionValue : substractionOfNumbers,
-         multiplicationValue : multiplicationOfNumbers,
-         divisionValue : Number(divisionOfNumbers.toFixed(2))
-     }
- }
+ function arithmeticOperations(number1,number2){
+  const sumOfNumbers = number1+number2;
+  const substractionOfNumbers = number1-number2;
+  const divisionOfNumbers = number1/number2;
+  //console.log(typeof divisionOfNumbers)
+  const multiplicationOfNumbers = number1*number2;
+  return {
+   sumValue : sumOfNumbers,
+   substractionValue : substractionOfNumbers,
+   multiplicationValue : multiplicationOfNumbers,
+   divisionValue : Number(divisionOfNumbers.toFixed(2))
+} }
 
 
 console.log(getReply(12345)); //please enter a valid command
@@ -127,5 +127,5 @@ console.log(getReply('What day is it today?'));//17th of November, 2020
 console.log(getReply('what is 3 + 3'));  // 6
 console.log(getReply('what is 4 * 12')); // 48
 console.log(getReply('Set a timer for 4 minutes')); //timer set for 4 minutes, after time 'Timer Done'
-console.log(getReply('Arithmetic operations of a and b'));
+console.log(getReply('Arithmetic operations of two random numbers'));
 //ex: Two Numbers are 44 and 3,{sumValue: 47, substractionValue: 41, multiplicationValue: 132, divisionValue: 14.67}
