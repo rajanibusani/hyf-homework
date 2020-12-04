@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HyfBay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,800"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Hyfbay </h1>
+    </header>
+    <main>
+      <div class = "user_fields">
+      <select id="sortingProducts" >
+        <option>Sort products</option>       
+        <option value="lowtohighrating">Low to high rating</option>
+        <option value="hightolowrating">High to low rating</option>        
+        <option value="lowtohigh">Low to high price</option>
+        <option value="hightolow">High to low price</option>     
+    </select>    
+      <input type = "search" placeholder="Search by product" id ="searchByProduct">
+      <input type = "search" placeholder="Search by max-price" id ="searchByPrice">
+    </div>
+        <ul>            
+        </ul>
+        
+    </main>
+    <script src="hyfBayHelpers.js"></script>
+    <script src="main.js"></script>
+  </body>
+  </html>
