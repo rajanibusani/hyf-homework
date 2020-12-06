@@ -3,13 +3,23 @@ console.log("Script loaded");
 
 const products = getAvailableProducts();
 function renderProducts(products) {
-    const ul_tag = document.querySelector("ul");
-    for (const product of products){
-        const li_tag = document.createElement("li");
-        li_tag.innerHTML= "<h2>"+product.name+"</h2>"+"<span> price: "+product.price+"</span>"+"<br>"+"<span> rating: "+product.rating+"</span>"+"<br>";
-        ul_tag.appendChild(li_tag);
-    }
+  const ul_tag = document.querySelector("ul");
+  ul_tag.innerHTML = "";
+  for (const product of products){
+      const li_tag = document.createElement("li");
+      ul_tag.appendChild(li_tag);
+      const h2_tag = document.createElement("h2");
+      h2_tag.innerHTML = product.name;
+      li_tag.appendChild(h2_tag);
+      const p_pricetag = document.createElement("p");
+      p_pricetag.innerHTML = "Price: " + product.price;
+      li_tag.appendChild(p_pricetag);         
+      const p_ratingtag = document.createElement("p");
+      p_ratingtag.innerHTML = "Rating: " + product.rating;
+      li_tag.appendChild(p_ratingtag);
+   }       
+     
+  }
 
-  }  
   renderProducts(products);
   console.log(products);
