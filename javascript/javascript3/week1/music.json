@@ -1,0 +1,44 @@
+[{
+    "name": "Avial",
+    "members":["Tony John", "Rex Vijayan", "Mithun Puthanveetil", " Binny Isaac"],     
+   
+    "place": {
+        "state":"Kerala",
+        "country":"India"
+    },
+    "started": 2003,
+    "active" : true,
+    "genre":["Rock"],
+    "lyrics":"Malayalam",
+    "website":	"www.avialmusic.com"
+
+}, 
+{
+    "name": "Krosswindz",
+    "members":["Vikramjit Banerjee", "Chandrani Banerjee ", "Ratanjit"],
+    "place": {
+        "state":"West Bengal",
+        "country":"India"
+    },
+    "started": 1990,
+    "active" : true,
+    "genre":["Bengali Rock", "fusion"],
+    "lyrics":"Bengali",
+    "website":	"www.krosswindz.com"
+
+},
+{
+    "name": "Indian Ocean",
+    "members":["Nikhil Rao", "Amit Kilam", "Rahul Ram", "Himanshu Josh"],    
+    "place": {
+        "state":"Uttar Pradesh",
+        "country":"India"
+    },
+    "started": 1990,
+    "active" : true,
+    "genre":["Indian Folk", "fusion", "Rock"],
+    "lyrics":"Hindi",
+    "website":	"www.indianoceanmusic.com"
+
+}
+]
