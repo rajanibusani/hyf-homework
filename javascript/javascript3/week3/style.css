@@ -1,0 +1,25 @@
+#Shoppingcart{
+ border: 2px solid black;
+ border-radius: 10px 65px;
+ position: absolute;
+ top: 20px;
+ right:80px;
+ margin:10px 40px;
+ padding:10px 40px;
+
+ 
+}
+body{
+    margin-top: 10px;
+    line-height:1.8em;
+    font-size: 1.2em;
+}
+li,p{
+    font-weight: 600;    
+}
+input{
+    width:200px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius:15px ;
+}
