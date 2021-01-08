@@ -9,9 +9,16 @@
 <body>
     <h1 id = "user"></h1>
     <div>        
-    <label for="search">Search for product</label>
-    <input type="search" id= "search" name= "productname"> 
-    <ul id="search_results"></ul>
+    <input type="search" id= "search" name= "productname" placeholder="Search for the product"> 
+    <button class= "modal-btn">Search</button>
+    
+    </div>
+    <div class="modal-bg">
+        <div class="modal">
+            
+            <ul id="search_results"></ul>
+            <span class= "modal-close">X</span>
+        </div>
     </div>
     <div id ="Shoppingcart">
         <h2>Shopping Cart</h2>

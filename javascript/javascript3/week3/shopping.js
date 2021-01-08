@@ -69,20 +69,39 @@ class ShoppingCart {
 
   }
 }
+const modalBg = document.querySelector('.modal-bg');
+const modalClose = document.querySelector(".modal-close")
 const input = document.getElementById("search");
-input.addEventListener("input", () => {
+const modalBtn = document.querySelector('.modal-btn')
+
+//searching the products by name and getting the products info in modal
+modalBtn.addEventListener("click", () => {
+  modalBg.classList.add('bg-active'); //making modal visible
   const productName = input.value;
   const ulTag = document.getElementById("search_results");
   ulTag.innerHTML = "";
   if (productName) {
-    shoppingCart.searchProduct(productName).forEach(product => {
-      const liTag = document.createElement("li");
-      liTag.textContent = `${product.name}:${product.price}`;
-      ulTag.appendChild(liTag);
-    });
+    const resultProducts = shoppingCart.searchProduct(productName);
+    console.log(resultProducts)
+    if (resultProducts.length > 0) {
+      ulTag.textContent = 'No of Products Found ' + resultProducts.length;
+      shoppingCart.searchProduct(productName).forEach(product => {
+        const liTag = document.createElement("li");
+        liTag.textContent = `${product.name}:${product.price}`;
+        ulTag.appendChild(liTag);
+      })
+    } else {
+      ulTag.textContent = "No Products Found"
+    }
+
   }
 });
 
+//closing modal box
+modalClose.addEventListener('click', () => {
+  modalBg.classList.remove('bg-active');
+
+})
 
 //Adding Products
 const shoppingCart = new ShoppingCart();
@@ -92,6 +111,10 @@ const laptop = new Product("Lenovo Laptop", 6000)
 shoppingCart.addProduct(laptop);
 const iphone = new Product("Apple Iphone11", 4500)
 shoppingCart.addProduct(iphone);
+const iphone12 = new Product("Apple Iphone12", 6500)
+shoppingCart.addProduct(iphone12);
+const laptop2= new Product("Dell Laptop", 5000);
+shoppingCart.addProduct(laptop2);
 const cam = new Product("camera", 2000)
 shoppingCart.addProduct(cam);
 //shoppingCart.removeProduct(cam)
