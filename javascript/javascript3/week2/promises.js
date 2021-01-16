@@ -1,7 +1,7 @@
 
 //Ex 2 :Promise that resolves after set time
 //creating a function that returns a promise
-function returnsPromise(resolveAfter) {
+function delay(resolveAfter) {
     const timeLimit = resolveAfter * 1000;
     const promise = new Promise(resolve => {
         setTimeout(() => {
@@ -12,14 +12,14 @@ function returnsPromise(resolveAfter) {
 }
 
 //using .then promise way
-returnsPromise(3).then(() => {
+delay(3).then(() => {
     console.log("I am called asynchronously");
 })
 //using async await function
 
 async function usingAsyncAwait() {
     try {
-        await returnsPromise(5)
+        await delay(5)
         console.log("I am called asynchronously using async and await function")
     } catch (error) {
         console.log(error)
@@ -32,7 +32,7 @@ usingAsyncAwait();
 function setTimeoutPromise(time) {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve
+            resolve()
         }, time)
     })
 }
