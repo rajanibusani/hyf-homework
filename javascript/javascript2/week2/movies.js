@@ -19,13 +19,13 @@ console.log("Movies with more than 50 letters are ",longTitles);
  const moviesWithTags = movies.filter(movie => {
  
  if(movie.rating >= 7){
-     movie.tag = "good";
+     movie.tag = "Good";
  }
   else if(movie.rating >= 4 && movie.rating < 7 ){
-    movie.tag = "average";
+    movie.tag = "Average";
  }
   else if(movie.rating < 4){
-    movie.tag = "bad";
+    movie.tag = "Bad";
  }
 return movies});
  console.log(moviesWithTags);
@@ -76,23 +76,10 @@ console.log(avgRatingOfMovies);
 //Count the total number of Good, Average and Bad movies using reduce. 
 //A return could fx be {goodMovies: 33, averageMovies: 45, goodMovies: 123}
 
-let noOfMoviesWithtags = {goodMovies:0,averageMovies: 0, badMovies:0};
+const ratingFreqOfMovies = moviesWithTags.reduce( (freq, movie) => {
+  freq[movie.tag]++;
+  return freq;   
+},{'Good': 0, 'Average': 0, 'Bad': 0});
+console.log(ratingFreqOfMovies);
 
-const countOfMovies =  movies.reduce((total, movie) => { 
-  if(movie.tag.toLowerCase() === "good"){
-    //noOfMoviesWithtags.goodMovies = total;    
-     total = "goodMovies";
-     
-  return noOfMoviesWithtags[total]++;   
-  } else if(movie.tag.toLowerCase() === "average"){       
-     total = "averageMovies";
-     
-  return noOfMoviesWithtags[total]++;   
-  } else{
-    total = "badMovies";
-     
-    return noOfMoviesWithtags[total]++;
-  }
-},0)
-console.log(noOfMoviesWithtags);
 

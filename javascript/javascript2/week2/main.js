@@ -40,7 +40,7 @@ function renderProducts(products) {
         userPrice = search_tag_price.value;
         maxPrice = parseInt(userPrice)
                
-        let filteredByPrice = products.filter(product =>{
+        const filteredByPrice = products.filter(product =>{
             if(product.price< maxPrice){
                 return product;
             }
