@@ -1,5 +1,5 @@
 --1.Find out how many tasks are in the task table
-SELECT count(*)
+SELECT count(0)
 FROM task; 
 --output: 35 rows
 
@@ -61,7 +61,7 @@ GROUP BY status.name;
 
 
 --10.Get the names of all statuses, sorted by the status with most tasks first
-SELECT count(*),status.name
+SELECT count(0),status.name
 FROM task
 INNER JOIN status
 ON task.status_id = status.id
