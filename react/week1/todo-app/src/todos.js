@@ -16,7 +16,7 @@ const todoArray = [
     }
 ]
 
-const Todoitems = ({ task, deadline }) => {
+const TodoItem = ({ task, deadline }) => {
     return (
         <>
             {task}, {deadline}
@@ -27,21 +27,20 @@ const Todoitems = ({ task, deadline }) => {
 const RenderTodos = ({ todos }) => {
 
     return (
-        <ol>
+        <ul>
             {
                 todos.map(todo => {
                     return (
                         <li  key={todo.id}>
-                            <Todoitems task={todo.task} deadline={todo.deadline} />
+                            <TodoItem task={todo.task} deadline={todo.deadline} />
                         </li>
                     )
                 })}
-
-        </ol>
+        </ul>
     )
 }
 
-const Todolist = () => {
+const TodoList = () => {
     return (
         <div>
             <h2>Todo List</h2>
@@ -50,4 +49,4 @@ const Todolist = () => {
     )
 }
 
-export default Todolist
+export default TodoList
