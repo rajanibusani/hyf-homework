@@ -1,4 +1,4 @@
-import GetTodos from "./components/GetTodos";
+import TodosHandler from "./components/TodosHandler";
 import Timer from "./components/Timer";
 import './App.css';
 
@@ -7,7 +7,7 @@ function App() {
     <div className="todo-app">
       <h1>Todo List </h1>
       <Timer />
-      <GetTodos />
+      <TodosHandler />
     </div>
   );
 }
