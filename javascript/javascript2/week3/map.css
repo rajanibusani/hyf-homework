@@ -1,0 +1,19 @@
+#map {
+    height: 350px;
+    width: 500px;
+    
+  }
+  button{
+      padding:10px;
+  }
+  button:hover{
+      background-color: green;
+     
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 10px 20px;
+    padding: 0;
+  }
