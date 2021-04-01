@@ -12,18 +12,20 @@ export const UserProvider = ({ children }) => {
         try {
             const fetchUsers = await fetch(url)
             const usersData = await fetchUsers.json();
-            console.log(usersData)
+            // console.log(usersData)
             if (usersData.items) {
                 setIsLoading(false)
                 return setUsers(usersData.items)
             } else if (usersData.message) {
                 console.log(error)
                 setIsLoading(false)
-                return setError([usersData.message]);
+                setError(usersData.message);
             }
         } catch (error) {
+            // console.log(error.Error)
+            setIsLoading(false)
             setError(error);
-            console.log(error)
+
         }
     }
 
@@ -34,7 +36,7 @@ export const UserProvider = ({ children }) => {
         error,
         getUsers: (url) => {
             if (userSearch) {
-                console.log(userSearch)
+                // console.log(userSearch)
                 setIsLoading(true);
                 return fetchUsers(url);
             }
