@@ -1,5 +1,7 @@
 tomato
 cauliflower
-cabbage
+broccoli
 potatoes
 carrot
+beetroot
+parsnips
