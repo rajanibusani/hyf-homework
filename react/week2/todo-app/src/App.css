@@ -1,0 +1,40 @@
+.todo-app {
+  text-align: center;
+}
+li {
+  list-style-type: none;
+}
+.checkedTodo {
+  text-decoration: line-through;
+  font-weight: 200;
+}
+.todo{
+  width : 400px;
+  border: 1px solid rgb(163, 158, 158);  
+  background-color: rgb(196, 188, 188);
+  border-radius: 10px;
+  margin: 5px auto;
+  font-size: 1.2em;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;  
+  justify-content:  space-between; 
+}
+.text{
+  color:green;
+}
+button{
+  background-color: rgb(44, 73, 15);
+  color:white;
+  font-size: 1em;
+  padding: 5px;
+}
+.input-text {
+  margin-right: 5px; 
+  width:250px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
