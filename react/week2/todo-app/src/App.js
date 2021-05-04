@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RenderTodos from './Todos/Todos';
+import Todos from './Todos/Todos';
 import AddTodo from './Todos/AddTodo';
 import './App.css';
 
@@ -53,7 +53,7 @@ function App() {
       <h1>Todo LIst </h1>
       <h2>You have used {timer} seconds on this website</h2>
       { todos.length > 0 ?
-        <RenderTodos todoArray={todos} onDelete={deleteTodo} /> : "No items"}
+        <Todos todoArray={todos} onDelete={deleteTodo} /> : "No items"}
       <AddTodo onAdd={addTodo} />
     </div>
   );

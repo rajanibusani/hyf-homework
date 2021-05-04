@@ -5,8 +5,12 @@ const AddTodo = ({ onAdd }) => {
     const [visible, setVisible] = useState(false);
 
     const onClick = () => {
-        setVisible(!visible);
-        onAdd(value);
+        setVisible(true);
+        if (value !== "") {
+            setVisible(false);
+            onAdd(value);
+        }
+
         setValue("")
     }
     return (

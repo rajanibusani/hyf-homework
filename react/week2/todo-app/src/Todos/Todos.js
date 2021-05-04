@@ -12,7 +12,7 @@ const TodoItem = ({ id, description, onDelete }) => {
     )
 }
 
-const RenderTodos = ({ todoArray, onDelete }) => {
+const Todos = ({ todoArray, onDelete }) => {
     return (
         <ul>
             {todoArray.map((todo, index) => {
@@ -24,4 +24,4 @@ const RenderTodos = ({ todoArray, onDelete }) => {
     )
 }
 
-export default RenderTodos
+export default Todos
